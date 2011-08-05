@@ -1,0 +1,16 @@
+{application, riakpool_app,
+ [
+  {description, "Riak Protocol Buffer connection pool based on Emysql pooling"},
+  {vsn, "0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+				  crypto
+                 ]},
+  {mod, { riakpool_app, []}},
+  {env, [
+			{lock_timeout, 1000},
+			{conns, [{"192.168.1.80", 8087, 1, []}]}
+	]}
+ ]}.
