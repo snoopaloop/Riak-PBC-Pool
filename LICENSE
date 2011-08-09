@@ -3,6 +3,8 @@ Bill Warnecke <bill@rupture.com>,
 Jacob Vorreuter <jacob.vorreuter@gmail.com>,
 Henning Diedrich <hd2010@eonblast.com>,
 Eonblast Corporation [http://www.eonblast.com].
+
+Modifications for Riak protocol buffer client:
 Joseph Lambert <joseph.g.lambert@gmail.com>
 
 Permission is  hereby  granted,  free of charge,  to any person

@@ -8,8 +8,7 @@
 -export([terminate/2, code_change/3]).
 
 -export([pools/0, waiting/0, add_pool/1, remove_pool/1,
-		pool_id/2,
-		get_connection/0, close_connection/1,
+		pool_id/2, close_connection/1,
 		add_connections/2, remove_connections/2, open_connections/1, open_n_connections/2,
 		lock_connection/0, wait_for_connection/0,
 		pass_connection/1, 
@@ -51,9 +50,6 @@ remove_connections(PoolId, Num) when is_integer(Num) ->
 
 lock_connection()->
 	do_gen_call(lock_connection).
-
-get_connection() ->
-	wait_for_connection().
 
 wait_for_connection()->
 	%% try to lock a connection. if no connections are available then
