@@ -4,7 +4,8 @@
 
 -export([	start/0, stop/0,
 			add_pool/2, add_pool/3, add_pool/4, 
-			remove_pool/2, increment_pool_size/3, decrement_pool_size/3
+			remove_pool/2, increment_pool_size/3, decrement_pool_size/3,
+			get_conn/0, return_conn/1
 		]).
 
 -include("riakpool.hrl").

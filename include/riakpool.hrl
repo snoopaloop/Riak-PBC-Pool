@@ -1,5 +1,5 @@
 -type host() :: string() | atom() | inet:ip_address().
--type port() :: non_neg_integer().
+%%-type port() :: non_neg_integer().
 
 -record(pool, {
 	pool_id :: binary(), 
@@ -7,7 +7,7 @@
 	host :: host(), 
 	port :: port(), 
 	available :: queue(), 
-	locked :: gb_trees(), 
+	locked :: gb_tree(), 
 	opts :: [tuple()]
 }).
 -record(connection, {

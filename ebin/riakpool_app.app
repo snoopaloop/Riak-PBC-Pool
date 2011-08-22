@@ -1,4 +1,4 @@
-{application, riakpool,
+{application, riakpool_app,
  [
   {description, "Riak Protocol Buffer connection pool based on Emysql pooling"},
   {vsn, "0.1"},
