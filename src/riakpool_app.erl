@@ -18,7 +18,7 @@ stop(_State) ->
     ok.
 
 get_env(Name, Default) ->
-	case application:get_env(riakpool, Name) of
+	case application:get_env(riakpool_app, Name) of
 		undefined ->
 			Default;
 		{ok, V} ->

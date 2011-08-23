@@ -319,7 +319,9 @@ initialize_pools() ->
 			size = Size,
 			host = Host,
 			port = Port,
-			opts = Opts
+			opts = Opts,
+			available = queue:new(), 
+			locked = gb_trees:empty()
 		} || {Host, Port, Size, Opts} <- riakpool_app:get_env(conns, [{"127.0.0.1", 8087, 1, []}])
 	].
 
